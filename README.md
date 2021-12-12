@@ -20,7 +20,12 @@ Enjoy!
 Stacks criadas pelo cdk
 
 * VPC
-    * Classe `VpcStac.java`
+    * Classe `VpcStack.java`
     * ```
       cdk deploy Vpc
+      ```
+* Cluster
+  * Classe `ClusterStackcdk.java`
+  * ```
+      cdk deploy Vpc Cluster
       ```
