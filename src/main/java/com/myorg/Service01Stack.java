@@ -10,6 +10,7 @@ import software.amazon.awscdk.services.ecs.ContainerImage;
 import software.amazon.awscdk.services.ecs.LogDriver;
 import software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateService;
 import software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageOptions;
+import software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck;
 import software.amazon.awscdk.services.logs.LogGroup;
 
 public class Service01Stack extends Stack {
@@ -43,5 +44,12 @@ public class Service01Stack extends Stack {
                                         .build())
                         .publicLoadBalancer(true) // informar que o ALB tera IP público
                         .build();
+
+        // Configuração do target group
+        service01.getTargetGroup().configureHealthCheck(HealthCheck.builder()
+                .path("/actuator/health")
+                .port("8080")
+                .healthyHttpCodes("200")
+                .build());
     }
 }

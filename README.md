@@ -30,8 +30,8 @@ Stacks criadas pelo cdk
       cdk deploy Vpc Cluster
     ```
 
-* Application Load Balance
-  * Classe `ClusterStackcdk.java`
+* Application Load Balancer
+  * Classe `Service01.java`
   * ```
       cdk deploy Vpc Cluster
     ```
