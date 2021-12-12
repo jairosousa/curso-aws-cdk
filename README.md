@@ -30,8 +30,11 @@ Stacks criadas pelo cdk
       cdk deploy Vpc Cluster
     ```
 
-* Application Load Balancer
+* Service 01
   * Classe `Service01.java`
+    * Criado Application Load Balancer
+    * Criado Target Group
+    * Auto-Scaling
   * ```
-      cdk deploy Vpc Cluster
+      cdk deploy Vpc Cluster Service01
     ```
