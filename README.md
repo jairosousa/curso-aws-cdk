@@ -39,6 +39,11 @@ Enjoy!
       cdk deploy Vpc Cluster Service01
     ```
     
+## Atualizar o serviço
+```
+cdk deploy Service01
+```
+    
 ## Destruir as Stack criadas
 ```
 cdk destroy Vpc Cluster Service01
