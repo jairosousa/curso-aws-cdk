@@ -17,7 +17,7 @@ It is a [Maven](https://maven.apache.org/) based project, so you can open this p
 
 Enjoy!
 
-Stacks criadas pelo cdk
+## Stacks criadas pelo cdk
 
 * VPC
     * Classe `VpcStack.java`
@@ -38,3 +38,8 @@ Stacks criadas pelo cdk
   * ```
       cdk deploy Vpc Cluster Service01
     ```
+    
+## Destruir as Stack criadas
+```
+cdk destroy Vpc Cluster Service01
+```
