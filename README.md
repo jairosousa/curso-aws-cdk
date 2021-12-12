@@ -38,6 +38,16 @@ Enjoy!
   * ```
       cdk deploy Vpc Cluster Service01
     ```
+* Banco de dados RDS
+  * Classe `RdsStack.java`
+    * Cria Cloud formation Parameter para o password
+    * Cria datasouce com a i `DatabaseInstance`
+    * Exporta paramentrops para outras stacks
+  * Ocorre uam mudança no comando devido agora com a criação do Banco precisamos passar o valor do password foi definido 
+    na Stack Rds com nome `databasePassword`
+    ```
+      cdk deploy --parameters Rds:databasePassword=jairo123456 Rds Service01
+    ```
     
 ## Atualizar o serviço
 ```
